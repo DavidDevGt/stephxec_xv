@@ -98,6 +98,15 @@ const Invitation: React.FC<{ guestName?: string | null }> = ({ guestName }) => {
               Mis XV Años
             </span>
           </h2>
+          {/* Información del invitado */}
+          <div className="mt-4 sm:mt-6 text-center">
+            <p className="font-serif text-gold text-sm sm:text-base md:text-lg mb-1">
+              Bienvenid@, {GUEST_INFO.family}
+            </p>
+            <p className="font-sans text-gray-600 text-xs sm:text-sm">
+              Tienes {GUEST_INFO.tickets} pases reservados
+            </p>
+          </div>
         </div>
       </motion.section>
 
@@ -155,9 +164,9 @@ const Invitation: React.FC<{ guestName?: string | null }> = ({ guestName }) => {
         <motion.div variants={activeFadeInUp}>
           <ImageSlider
             images={[
-              { src: '/src/assets/slider/IMG_1703.jpg', alt: 'Galería - Foto 1' },
-              { src: '/src/assets/slider/IMG_1713.jpg', alt: 'Galería - Foto 2' },
-              { src: '/src/assets/slider/IMG_1720.jpg', alt: 'Galería - Foto 3' },
+              { src: new URL('/src/assets/slider/IMG_1703.jpg', import.meta.url).href, alt: 'Galería - Foto 1' },
+              { src: new URL('/src/assets/slider/IMG_1713.jpg', import.meta.url).href, alt: 'Galería - Foto 2' },
+              { src: new URL('/src/assets/slider/IMG_1720.jpg', import.meta.url).href, alt: 'Galería - Foto 3' },
             ]}
             autoPlay={true}
             autoPlayDelay={4000}
