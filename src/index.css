@@ -7,3 +7,17 @@ body { -ms-overflow-style: none; scrollbar-width: none; }
 .clip-arch {
   clip-path: ellipse(100% 100% at 50% 0%);
 }
+
+@media (prefers-color-scheme: dark) {
+  /* Evita que el navegador invierta los colores automáticamente */
+  html, body {
+    background-color: #FDFBF7 !important; /* Tu color cream */
+    color: #2D2D2D !important;
+  }
+}
+
+/* Si usas la clase 'light' en el div principal */
+.light {
+  background-color: #FDFBF7 !important;
+  color: #2D2D2D !important;
+}

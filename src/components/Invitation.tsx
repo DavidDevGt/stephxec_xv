@@ -44,7 +44,7 @@ const Invitation: React.FC<{ guestName?: string | null }> = ({ guestName }) => {
   const activeStaggerContainer = prefersReducedMotion ? staggerContainerReduced : staggerContainer;
 
   return (
-    <div className="min-h-screen bg-cream overflow-hidden font-sans relative">
+    <div className="light min-h-screen bg-[#FDFBF7] overflow-hidden font-sans relative text-[#2D2D2D]">
       {/* Global Background Texture */}
       <SubtleGoldPattern />
 
