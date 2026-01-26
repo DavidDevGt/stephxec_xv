@@ -23,7 +23,7 @@ import {
   staggerContainerReduced
 } from "../constants/animations";
 
-const Invitation: React.FC = () => {
+const Invitation: React.FC<{ guestName?: string | null }> = ({ guestName }) => {
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
 
   // Check for prefers-reduced-motion preference

@@ -1,13 +1,14 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { GUEST_INFO } from '../constants';
+import { GUEST_INFO, EVENT_DETAILS } from '../constants';
 import { ENVELOPE_OPEN_DELAY, ENVELOPE_OPEN_DURATION } from '../constants/animations';
 
 interface EnvelopeProps {
   onOpen: () => void;
+  guestName?: string | null;
 }
 
-const Envelope: React.FC<EnvelopeProps> = ({ onOpen }) => {
+const Envelope: React.FC<EnvelopeProps> = ({ onOpen, guestName }) => {
   const [isOpening, setIsOpening] = useState(false);
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
   const envelopeRef = useRef<HTMLDivElement>(null);
@@ -80,12 +81,11 @@ const Envelope: React.FC<EnvelopeProps> = ({ onOpen }) => {
         <motion.div 
           animate={isOpening ? { opacity: 0 } : { opacity: 1 }}
           transition={{ duration: prefersReducedMotion ? 0 : 0.3 }}
-          className="text-center mb-6 sm:mb-8 text-cream space-y-2"
+          className="text-center mb-6 sm:mb-8 text-cream"
         >
-          <h2 className="text-2xl sm:text-3xl font-serif text-gold tracking-wider">{GUEST_INFO.family}</h2>
-          <div className="inline-block px-3 sm:px-4 py-1 border border-gold/50 rounded-full text-xs sm:text-sm font-sans tracking-widest uppercase">
-            Pases Reservados: {GUEST_INFO.passes}
-          </div>
+          <h2 className="text-2xl sm:text-3xl font-serif text-gold tracking-wider">
+            {guestName || GUEST_INFO.family}
+          </h2>
         </motion.div>
 
         {/* The Envelope */}
@@ -118,13 +118,13 @@ const Envelope: React.FC<EnvelopeProps> = ({ onOpen }) => {
           >
              <div className="w-full h-full bg-burgundy border-b-2 border-red-900/50 shadow-lg relative flex justify-center items-end"
                   style={{ clipPath: "polygon(0 0, 50% 100%, 100% 0)" }}>
-                
-                {/* Wax Seal */}
-                <div className="absolute -bottom-4 sm:-bottom-6 w-10 sm:w-12 h-10 sm:h-12 bg-gold rounded-full shadow-md flex items-center justify-center border-2 border-yellow-600/50 z-30">
-                  <span className="font-serif text-red-900 font-bold text-base sm:text-xl">XV</span>
-                </div>
              </div>
           </motion.div>
+
+          {/* Wax Seal - Moved outside the top flap to be in front */}
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10 sm:w-12 h-10 sm:h-12 bg-gold rounded-full shadow-md flex items-center justify-center border-2 border-yellow-600/50 z-50">
+            <span className="font-serif text-red-900 font-bold text-base sm:text-xl">XV</span>
+          </div>
 
           {/* The Card Inside (Peek effect) */}
           <motion.div
@@ -136,7 +136,9 @@ const Envelope: React.FC<EnvelopeProps> = ({ onOpen }) => {
             }}
             className="absolute left-3 sm:left-4 right-3 sm:right-4 top-2 bottom-2 bg-cream z-0 flex flex-col items-center justify-start pt-6 sm:pt-8 shadow-inner"
           >
-             <h3 className="font-script text-2xl sm:text-3xl text-burgundy">Stephanie</h3>
+             <h3 className="font-script text-2xl sm:text-3xl text-burgundy">
+               {EVENT_DETAILS.name}
+             </h3>
              <p className="text-xs uppercase tracking-widest mt-1 sm:mt-2 text-gray-500">Mis Quince Años</p>
           </motion.div>
 
