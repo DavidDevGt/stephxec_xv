@@ -265,6 +265,9 @@ const Invitation: React.FC<{ guestName?: string | null }> = ({ guestName }) => {
               <p className="text-gray-500 font-sans text-[0.65rem] sm:text-[0.7rem] uppercase tracking-[0.2em] font-medium">
                 Vestido
               </p>
+              <div className="mt-2 flex items-center gap-1 text-burgundy bg-red-50/50 px-2 py-1 rounded-full border border-red-100/50 shadow-sm">
+                <span className="font-bold text-xs uppercase tracking-wide">Evitar corinto</span>
+              </div>
             </div>
 
             {/* Caballeros */}
@@ -276,13 +279,6 @@ const Invitation: React.FC<{ guestName?: string | null }> = ({ guestName }) => {
               <p className="text-gray-500 font-sans text-[0.65rem] sm:text-[0.7rem] uppercase tracking-[0.2em] font-medium">
                 Traje Formal
               </p>
-            </div>
-          </div>
-          
-          {/* Sección para evitar el color corinto */}
-          <div className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-gold/10 flex flex-col items-center">
-            <div className="flex items-center gap-2 sm:gap-3 text-burgundy bg-red-50/50 px-4 sm:px-6 py-2 sm:py-3 rounded-full border border-red-100/50 shadow-sm">
-              <span className="font-bold text-xs sm:text-sm uppercase tracking-wide">Evitar usar el color corinto</span>
             </div>
           </div>
         </div>
