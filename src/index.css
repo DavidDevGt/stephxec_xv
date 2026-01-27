@@ -1,6 +1,4 @@
-/* Smooth scrolling */
 html { scroll-behavior: smooth; }
-/* Hide scrollbar for cleaner look */
 ::-webkit-scrollbar { width: 0px; background: transparent; }
 body { -ms-overflow-style: none; scrollbar-width: none; }
 
@@ -9,15 +7,24 @@ body { -ms-overflow-style: none; scrollbar-width: none; }
 }
 
 @media (prefers-color-scheme: dark) {
-  /* Evita que el navegador invierta los colores automáticamente */
   html, body {
-    background-color: #FDFBF7 !important; /* Tu color cream */
+    background-color: #FDFBF7 !important;
     color: #2D2D2D !important;
   }
 }
 
-/* Si usas la clase 'light' en el div principal */
-.light {
+.light,
+.light * {
   background-color: #FDFBF7 !important;
   color: #2D2D2D !important;
+  border-color: inherit !important;
+}
+
+.light h1, .light h2, .light h3, .light h4, .light h5, .light h6,
+.light p, .light span, .light div, .light section {
+  color: #2D2D2D !important;
+}
+
+.light img {
+  filter: none !important;
 }
