@@ -9,8 +9,8 @@ export const EVENT_DETAILS = {
   locationName: "Club Español",
   address: "Calzada Roosevelt km 13.5, 40-20 Zona 7, Ciudad de Guatemala",
   mapLink: "https://maps.app.goo.gl/88c6iy973Gv9zdsZA?g_st=aw",
-  whatsappNumber: "50252727698",
-  giftMessage: "Tu presencia es mi mejor regalo, pero si deseas tener un detalle conmigo, te agradezco tu muestra de cariño en efectivo para ayudarme a completar mi colección de makeup y mis proyectos.",
+  whatsappNumber: "50258794988",
+  giftMessage: "Gracias por acompañarme y ser parte de un día tan importante en mi vida. Tu presencia es lo que realmente hace especial este momento. Si deseas regalarme algo más, una aportación en efectivo será recibida con muchísimo cariño y me ayudará a seguir avanzando en mis metas personales.",
 };
 
 // Validate event details on load
