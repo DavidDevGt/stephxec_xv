@@ -316,7 +316,7 @@ const Invitation: React.FC<{ guestName?: string | null }> = ({ guestName }) => {
       {/* --- Footer --- */}
       <div className="fixed bottom-6 left-4 right-4 z-40 flex justify-center">
         <a
-          href={`https://wa.me/${EVENT_DETAILS.whatsappNumber}?text=Hola,%20confirmo%20mi%20asistencia%20a%20los%20XV%20de%20Stephanie.%20Familia:%20${GUEST_INFO.family}`}
+          href={`https://wa.me/${EVENT_DETAILS.whatsappNumber}?text=${encodeURIComponent(`Hola, confirmo mi asistencia a los XV de Stephanie. Invitado(s): ${GUEST_INFO.family}`)}`}
           target="_blank"
           rel="noreferrer"
           className="w-full max-w-lg bg-burgundy text-gold font-sans text-sm font-bold py-4 rounded-full shadow-2xl flex items-center justify-center gap-3 hover:scale-[1.02] transition-transform border border-gold ring-2 ring-burgundy ring-offset-2 ring-offset-transparent"
