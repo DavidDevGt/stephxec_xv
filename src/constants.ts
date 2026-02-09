@@ -6,7 +6,7 @@ const urlParams = typeof window !== 'undefined' ? new URLSearchParams(window.loc
 export const EVENT_DETAILS = {
   name: "Stephanie Xec",
   date: new Date('2026-03-07T19:00:00'),
-  locationName: "Salón El Pimental",
+  locationName: "Club Español",
   address: "Calzada Roosevelt km 13.5, 40-20 Zona 7, Ciudad de Guatemala",
   mapLink: "https://maps.app.goo.gl/88c6iy973Gv9zdsZA?g_st=aw",
   whatsappNumber: "50252727698",
