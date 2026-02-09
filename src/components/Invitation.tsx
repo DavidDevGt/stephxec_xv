@@ -167,6 +167,8 @@ const Invitation: React.FC<{ guestName?: string | null }> = ({ guestName }) => {
               { src: new URL('/src/assets/slider/IMG_1703.jpg', import.meta.url).href, alt: 'Galería - Foto 1' },
               { src: new URL('/src/assets/slider/IMG_1713.jpg', import.meta.url).href, alt: 'Galería - Foto 2' },
               { src: new URL('/src/assets/slider/IMG_1720.jpg', import.meta.url).href, alt: 'Galería - Foto 3' },
+              { src: new URL('/src/assets/slider/IMG_1725.jpg', import.meta.url).href, alt: 'Galería - Foto 4' },
+              { src: new URL('/src/assets/slider/IMG_1726.jpg', import.meta.url).href, alt: 'Galería - Foto 5' },
             ]}
             autoPlay={true}
             autoPlayDelay={4000}
